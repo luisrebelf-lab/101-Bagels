@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	box-sizing: border-box;
+}
+@media only screen and (max-width:769px){ /* For tablets: */
+	body {
+		max-width: 769px;
+	}
+}
+ 
+@media only screen and (max-width:480px){ /* For phones: */
+	body {
+	max-width: 480px;	
+	}
+}
+#box1 {
+	 border-radius: 10%;
+  border: 5px solid #e06666;
+  background-color:#fffff0f0;
+  padding: 30px; 
+float: left;
+}
+#box2 {
+	 border-radius: 25px;
+  border: 3.5px solid #e06666;
+  background-color:#fffff0f0;
+  padding: 20px; 
+	
+}
+body {
+	max-width: 2000px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #fbedcfff;
+}
+#header{
+	background-color: #856647ff;
+	color: white;
+	padding-bottom: 33px;
+	text-align: right;
+	vertical-align: center;
+
+}
+a:link {
+  color: white;
+	padding:10px 15px;
+	margin: 5px 15px;
+	border-radius: 5px;
+	text-decoration: none
+}
+
+/*visited link*/
+a:visited {
+  color: white;
+	padding:10px 15px;
+	margin: 5px 15px;
+	border-radius: 5px;
+}
+#nav
+{
+	font-size:25px; 
+	padding: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	color: darkgrey;
+		
+}
+#foot
+{
+	font-size:20px; 
+	text-align: right;
+	background-color: #856647ff; 
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	padding-right: 20px;
+
+}
+#logo {
+	float: left;
+	margin: 15px;
+	height: 100px;
+	width: 100px;
+}
+p{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+h2 {
+		align-text: center;
+}
