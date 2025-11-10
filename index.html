@@ -5,7 +5,6 @@
 .container {
   position: relative;
   text-align: center;
-  color: white;
 }
 .centered {
   position: absolute;
@@ -14,6 +13,10 @@
   transform: translate(-50%, -50%);
 	font-size: 40px;
 }
+	.day {float: left;
+ font-size: clamp(10px, 1vw, 15px);}
+	.hour {float: right; font-size: clamp(10px, 1vw, 15px);
+	}
 
 	</style>
 	<link rel="stylesheet" href="style.css">
@@ -25,19 +28,40 @@
 
 <body>
 <div id="header">
-		<div id="logo"><img src="images/bagel.avif" height="90px" width="90px" alt=""/></div>
+		<div id="logo"><img src="images/bagel.avif" height="90pc" width="90pc" alt=""/></div>
 <div id="nav" style="padding-top: 4%">
 	<a>Home</a>	<a href="menu.html">Menu</a>		<a href="about.html">About us</a>	<a href="gallery.html">Gallery</a>	<a href="contact.html">Contact</a> </div>
 	</div>
 <div class="container">
-<img src="images/yuum.png" height="200%" width="100%" alt="">
-<div class="centered">101 Bagels in Oceanside CA, is a bakery and cafe that features a complete online menu for breakfest and lunch. Our shop includes delicious smoothies and local produce.</div>
+<img src="images/yuum.png" height="600vw" width="100%" alt="">
+<div class="centered" style="color: white">101 Bagels in Oceanside CA, is a bakery and cafe that features a complete online menu for breakfest and lunch. Our shop includes delicious smoothies and local produce.</div>
 </div>
 <div style="margin-bottom: 45%">
-<div id="box1" style="margin-left: 6.5%;margin-top: 20px;margin-right: : 20px; width: 20%; height: 400px; text-align: center;">
+<div id="box1" style="margin-left: 6.5%;margin-top: 20px;margin-right: : 20px; width: 20%; height: 20pc; text-align: center;">
 	<h2> Hours</h2>
-	<img src="images/hours.png" height="80%" width="110%" alt="" style="align-content: center; padding-right: 10px" >
+	<div class="day">
+
+
+	SUN: <br>
+	MON: <br>
+	TUE: <br>
+	WED: <br>
+	THU: <br>
+	FRI: <br>
+	SAT: <br>
+
+		</div>
+		<div class="hour">
+		6AM - 2PM <br>
+			6AM - 2PM <br>
+			6AM - 2PM <br>
+			6AM - 2PM <br>
+			6AM - 2PM <br>
+			6AM - 2PM <br>
+			6AM - 2PM <br>
+		</div>
 	</div>
+	
 <div id="box1" style="margin: 20px; width: 40%; height: 400px; text-align: center;">
 	<h2> Most Popular Items</h2>
 	</div>
