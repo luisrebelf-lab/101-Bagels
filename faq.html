@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+  text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	font-size: clamp(20px, 3vw, 40px);
+}
+	.boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allows stacking when too narrow */
+  margin: 20px auto;
+  width: 90%;
+}
+
+.box1 {
+  background-color: #fffff0f0;
+	 border-radius: 25px;
+  border: 3.5px solid #e06666;
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+  box-sizing: border-box;
+  min-height: 300px;
+	margin: 25px 10%;
+}
+
+/* Responsive behavior */
+@media (max-width : 1011px ){
+  .box1 {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .box1 {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+.accordion {
+  background-color: #e06666;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: solid;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+	border-radius: 25px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-color: #914141;
+}
+
+.active, .accordion:hover {
+  background-color: #914141;
+	color: white;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+	  background-color: #fffff0f0;
+	 border-radius: 25px;
+  border: 3.5px solid #e06666;
+}
+	</style>
+	<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initail-scale=1.0">
+<title>101 Bagels FAQ</title>
+<link rel="icon" type="image/x-icon" href="images/bagel.avif">
+</head>
+
+<body>
+	
+<div id="body">
+<div id="header">
+<nav id="nav">
+  <div id="logo">
+    <img src="images/bagel.avif" alt="101 Bagels logo">
+  </div>
+
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About Us</a>
+    <a>FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+	</div>
+	<div class="box1">
+	<h2>Frequently Asked Questions</h2>
+
+<button class="accordion">1. What are your hours of operation?</button>
+<div class="panel">
+  <p> We’re open seven days a week from 6:30 AM to 2:30 PM. Holiday hours may vary, so check our social media for updates.</p>
+</div>
+
+<button class="accordion">2. Do you make your bagels fresh each day?</button>
+<div class="panel">
+  <p> Yes! All of our bagels are made fresh every morning using traditional methods and high-quality ingredients.</p>
+</div>
+
+<button class="accordion">3. Do you offer gluten-free or vegan options?</button>
+<div class="panel">
+  <p> While we don’t offer gluten-free bagels at this time, we do have vegan-friendly spreads and sandwich options. Ask our staff for suggestions!</p>
+</div>
+	<button class="accordion">4. Can I place a large order for an event or office meeting?</button>
+<div class="panel">
+  <p> Absolutely. We offer catering trays, bulk bagel orders, and sandwich platters. Please place large orders at least 24–48 hours in advance.</p>
+</div>
+	
+				<button class="accordion">5. Do you have outdoor seating or dine-in options?</button>
+<div class="panel">
+  <p> Yes, we offer both indoor and outdoor seating, and all items are available for dine-in or take-out.</p>
+</div>
+				<button class="accordion">6. Where are you located?</button>
+<div class="panel">
+  <p> We’re located at 323 North Coast Highway, Oceanside, CA, along the historic Highway 101 route.</p>
+</div>
+			<button class="accordion">7. Do you offer delivery?</button>
+<div class="panel">
+  <p> At this time, we offer pickup only, but customers are welcome to order ahead by phone.</p>
+</div>
+
+</div>
+
+	</div>
+<div id="foot">Copyright &copy; 2025 101 Bagels</div>
+<script>
+  const nav = document.getElementById('nav');
+  const toggle = document.querySelector('.menu-toggle');
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent closing instantly
+    nav.classList.toggle('active');
+    toggle.textContent = nav.classList.contains('active') ? '✕' : '☰';
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target)) {
+      nav.classList.remove('active');
+      toggle.textContent = '☰';
+    }
+  });
+</script>
+	<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
